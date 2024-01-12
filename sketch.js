@@ -26,19 +26,19 @@ function setup()
   ImageRadio = createRadio();
   ImageRadio.position (420, 0);
   ImageRadio.size(80);
-  ImageRadio.style('color', color(255,255,255));
+  //ImageRadio.style('color', color(255,255,255));
   ImageRadio.option(ShrimpPath,'Shrimp');
   ImageRadio.option(HMCPath,'HMC ');
   ImageRadio.option(BananaPath,'Banana');
   ImageRadio.selected(ShrimpPath);
   
   ColorModeRadio = createCheckbox('Background dark mode', true);
-  ColorModeRadio.style('color', color(255,255,255));
+  //ColorModeRadio.style('color', color(255,255,255));
   ColorModeRadio.position (500,0);
   ColorModeRadio.size(200);
   
   InversionRadio = createCheckbox('Invert image', false);
-  InversionRadio.style('color', color(255,255,255));
+  //InversionRadio.style('color', color(255,255,255));
   InversionRadio.position (500,20);
   InversionRadio.size(200);
   
