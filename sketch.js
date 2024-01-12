@@ -1,11 +1,9 @@
 const Glyphs = 'X@#W$9876543210?!abc;:+-./_ ';
 
-const PeacockPath = "LowPeacock.jpg";
 const ShrimpPath = "Shrimp.jpg";
 const HMCPath = "logohmc.jpg";
 const BananaPath = "PBJ.gif";
 
-let PeacockImage;
 let ShrimpImage;
 let HMCImage;
 let BananaGif;
@@ -18,7 +16,6 @@ let InversionRadio;
 
 function preload()
 {
-  PeacockImage = loadImage(PeacockPath);
   ShrimpImage = loadImage(ShrimpPath);
   HMCImage = loadImage(HMCPath);
   BananaGif = loadImage(BananaPath);
@@ -30,11 +27,10 @@ function setup()
   ImageRadio.position (420, 0);
   ImageRadio.size(80);
   ImageRadio.style('color', color(255,255,255));
-  ImageRadio.option(PeacockPath,'Peacock');
   ImageRadio.option(ShrimpPath,'Shrimp');
   ImageRadio.option(HMCPath,'HMC ');
   ImageRadio.option(BananaPath,'Banana');
-  ImageRadio.selected(PeacockPath);
+  ImageRadio.selected(ShrimpPath);
   
   ColorModeRadio = createCheckbox('Background dark mode', true);
   ColorModeRadio.style('color', color(255,255,255));
@@ -72,11 +68,7 @@ let FrameCounter = 0;
 function processImage(DarkMode)
 {
   const SelectedImage = ImageRadio.value();
-  if (SelectedImage == PeacockPath)
-  {
-    CurrentImage = PeacockImage;
-  }
-  else if (SelectedImage == ShrimpPath)
+  if (SelectedImage == ShrimpPath)
   {
     CurrentImage = ShrimpImage;
   }
